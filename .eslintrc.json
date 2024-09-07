@@ -1,0 +1,22 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+	"plugins": [
+		"@typescript-eslint"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2020, // or a higher version if needed
+		"sourceType": "module"
+	},
+	"rules": {
+		// Customize your linting rules here
+	},
+	"env": {
+		"node": true,
+		"es2021": true
+	}
+}

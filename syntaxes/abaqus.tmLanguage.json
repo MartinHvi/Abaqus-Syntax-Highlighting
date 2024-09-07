@@ -1,133 +1,133 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Abaqus",
-	"patterns": [
-		{
-			"include": "#headertext"
-		},
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#variables"
-		},
-		{
-			"include": "#variablesSpaces"
-		},
-		{
-			"include": "#parametric"
-		},
-		{
-			"include": "#numerical"
-		},
-		{
-			"include": "#variableValue"
-		},
-		{
-			"include": "#otherVariableValue"
-		},
-		{
-			"include": "#operator"
-		}
-	],
-	"repository": {
-		"comments": {
-			"patterns": [
-				{
-					"comment": "Comment line",
-					"begin": "^[*][*]",
-					"end": "(?=\\n)",
-					"name": "comment.line.abaqus"
-				}
-			]
-		},
-		"headertext": {
-			"patterns": [
-				{
-					"comment": "Header text",
-					"name": "string.quoted.docstring.multi.abaqus",
-					"begin": "(?<=HEADING)",
-					"end": "(?=\\*)"
-				}
-			]
-		},
-		"numerical": {
-			"patterns": [
-				{
-					"comment": "Numerical values",
-					"name": "constant.numeric.abaqus",
-					"match": "([+-]?(?=\\.\\d|\\d)(?:\\d+)?(?:\\.?\\d*))(?:[eE]([+-]?\\d+))?"
-				}
-			]
-		},
-		"keywords": {
-			"patterns": [
-				{
-					"comment": "Abaqus keywords",
-					"name": "keyword.control.abaqus",
-					"begin": "^[*]",
-					"end": "(?=\\,|\\n)"
-				}
-			]
-		},
-		"parametric": {
-			"patterns": [
-				{
-					"comment": "Parametric variables",
-					"name": "entity.name.function.abaqus",
-					"begin": "(?=<)",
-					"end": "(>)"
-				}
-			]
-		},
-		"variables": {
-			"patterns": [
-				{
-					"comment": "Variables",
-					"name": "entity.name.variable.abaqus",
-					"match": "\\w+(?==)"
-				}
-			]
-		},
-		"variablesSpaces": {
-			"patterns": [
-				{
-					"comment": "Space separate variables",
-					"name": "entity.name.variable.abaqus",
-					"match": "(?<=,|\\s)[a-zA-Z]+\\s+[a-zA-Z]+(?=\\=)"
-				}
-			]
-		},
-		"variableValue": {
-			"patterns": [
-				{
-					"comment": "Variable values",
-					"name": "constant.language.abaqus",
-					"match": "(?<==)[^,*\\n]+(?<=)"
-				}
-			]
-		},
-		"otherVariableValue": {
-			"patterns": [
-				{
-					"comment": "Other variable values",
-					"name": "constant.language.abaqus",
-					"match": "(?<=|\\s,)[A-Za-z0-9-_]+(?=,|\\s)"
-				}
-			]
-		},
-		"operator": {
-			"patterns": [
-				{
-					"comment": "Operators such as =",
-					"name": "keyword.operator.abaqus",
-					"match": "(\\=)"
-				}
-			]
-		}
-	},
-	"scopeName": "source.abaqus"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Abaqus",
+  "patterns": [
+    {
+      "include": "#headertext"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#variablesSpaces"
+    },
+    {
+      "include": "#parametric"
+    },
+    {
+      "include": "#numerical"
+    },
+    {
+      "include": "#variableValue"
+    },
+    {
+      "include": "#otherVariableValue"
+    },
+    {
+      "include": "#operator"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "comment": "Comment line",
+          "begin": "^[*][*]",
+          "end": "(?=\\n)",
+          "name": "comment.line.abaqus"
+        }
+      ]
+    },
+    "headertext": {
+      "patterns": [
+        {
+          "comment": "Header text",
+          "name": "string.quoted.docstring.multi.abaqus",
+          "begin": "(?<=HEADING)",
+          "end": "(?=\\*)"
+        }
+      ]
+    },
+    "numerical": {
+      "patterns": [
+        {
+          "comment": "Numerical values",
+          "name": "constant.numeric.abaqus",
+          "match": "([+-]?(?=\\.\\d|\\d)(?:\\d+)?(?:\\.?\\d*))(?:[eE]([+-]?\\d+))?"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "comment": "Abaqus keywords",
+          "name": "keyword.control.abaqus",
+          "begin": "^[*]",
+          "end": "(?=\\,|\\n)"
+        }
+      ]
+    },
+    "parametric": {
+      "patterns": [
+        {
+          "comment": "Parametric variables",
+          "name": "entity.name.function.abaqus",
+          "begin": "(?=<)",
+          "end": "(>)"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "comment": "Variables",
+          "name": "entity.name.variable.abaqus",
+          "match": "\\w+(?==)"
+        }
+      ]
+    },
+    "variablesSpaces": {
+      "patterns": [
+        {
+          "comment": "Space separate variables",
+          "name": "entity.name.variable.abaqus",
+          "match": "(?<=,|\\s)[a-zA-Z]+\\s+[a-zA-Z]+(?=\\=)"
+        }
+      ]
+    },
+    "variableValue": {
+      "patterns": [
+        {
+          "comment": "Variable values",
+          "name": "constant.language.abaqus",
+          "match": "(?<==)[^,*\\n]+(?<=)"
+        }
+      ]
+    },
+    "otherVariableValue": {
+      "patterns": [
+        {
+          "comment": "Other variable values",
+          "name": "constant.language.abaqus",
+          "match": "(?<=|\\s,)[A-Za-z0-9-_]+(?=,|\\s)"
+        }
+      ]
+    },
+    "operator": {
+      "patterns": [
+        {
+          "comment": "Operators such as =",
+          "name": "keyword.operator.abaqus",
+          "match": "(\\=)"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.abaqus"
 }

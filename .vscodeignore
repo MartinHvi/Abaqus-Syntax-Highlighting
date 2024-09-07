@@ -8,5 +8,4 @@ images/**
 !images/logo128.png
 node_modules
 .github
-out/**
 .eslintrc.json

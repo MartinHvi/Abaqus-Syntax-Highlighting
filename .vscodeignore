@@ -1,7 +1,11 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+.yarnrc
 .gitattributes
 vsc-extension-quickstart.md
 images/**
 !images/logo128.png
+node_modules
+.github
+.eslintrc.json

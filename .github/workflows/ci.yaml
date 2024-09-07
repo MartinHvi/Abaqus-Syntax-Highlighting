@@ -47,7 +47,7 @@ jobs:
           name: linux-x64
       
       - name: Publish extension
-        run: npx vsce publish --packagePath $(find . -iname "*.vsix")
+        run: npx @vscode/vsce publish --packagePath $(find . -iname "*.vsix")
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
 

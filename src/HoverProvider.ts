@@ -17,7 +17,8 @@ function readJSON(jsonPath: string): HoverInfo {
   let data: HoverInfo;
   try {
     data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
-  } catch (err) {
+  } catch {
+    // Handle error without using the error object
     data = {
       default: 'default hover',
     };
@@ -48,7 +49,10 @@ export class HoverProvider implements vscode.HoverProvider {
     const content = new vscode.MarkdownString(
       hoverInfo[word] || 'No information available',
     );
-    console.log(hoverInfo[word]);
+
+    // Remove console.log statement
+    // console.log(hoverInfo[word]); 
+
     return {
       contents: [content],
     };

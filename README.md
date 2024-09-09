@@ -22,6 +22,7 @@ Supported file extensions:
 - .inp
 - .inc
 - .incl
+- .pes
 
 ---
 

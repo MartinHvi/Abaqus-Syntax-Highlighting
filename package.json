@@ -76,7 +76,8 @@
         "extensions": [
           ".inp",
           ".inc",
-          ".incl"
+          ".incl",
+          ".pes"
         ],
         "configuration": "./language-configuration.json"
       }

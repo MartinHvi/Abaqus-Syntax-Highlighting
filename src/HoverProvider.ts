@@ -20,7 +20,10 @@ function readJSON(jsonPath: string): HoverInfo {
   } catch {
     // Handle error without using the error object
     data = {
-      default: 'default hover',
+      'default': 'test1',
+      'this is a default': 'test2',
+      'this is a default-test': 'test3',
+      'this is a default-test case': 'test4'
     };
   }
   return data;
@@ -36,7 +39,7 @@ export class HoverProvider implements vscode.HoverProvider {
     // Get word range
     const wordRange = document.getWordRangeAtPosition(
       position,
-      /[A-Za-z0-9*-_\s]+/gm,
+      /[\w*]+(?:[\s-]+[\w]+)*(?=\s|,|$)+/gm,
     );
     if (!wordRange) {
       return { contents: [] };

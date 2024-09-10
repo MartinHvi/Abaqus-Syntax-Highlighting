@@ -1,5 +1,9 @@
 # Change Log
 
+## [2.2.1] (2024-09-07)
+
+Fix regex for hover provider.
+
 ## [2.2.0] (2024-09-07)
 
 Added support for .pes file extension.

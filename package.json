@@ -4,7 +4,7 @@
   "description": "Custom hover information, syntax highlighting for input files",
   "icon": "images/logo128.png",
   "publisher": "MartinHviid",
-  "version": "2.1.2",
+  "version": "2.2.1",
   "engines": {
     "vscode": "^1.61.0"
   },
@@ -76,7 +76,8 @@
         "extensions": [
           ".inp",
           ".inc",
-          ".incl"
+          ".incl",
+          ".pes"
         ],
         "configuration": "./language-configuration.json"
       }

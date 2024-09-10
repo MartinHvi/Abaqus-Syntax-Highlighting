@@ -1,5 +1,15 @@
 # Change Log
 
+## [2.2.1] (2024-09-07)
+
+Fix regex for hover provider.
+
+## [2.2.0] (2024-09-07)
+
+Added support for .pes file extension.
+
+## [2.1.2] (2024-09-07)
+
 ## [2.1.0] (2022-12-19)
 
 Added commands accessible by the command palette using the short cut CTRL + SHIFT + P.
